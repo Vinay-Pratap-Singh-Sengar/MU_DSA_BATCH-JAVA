@@ -1,4 +1,4 @@
-package class_2;
+package class_2.Programs;
 
 public class Operators {
     public static void main(String[] args) {
