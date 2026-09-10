@@ -1,4 +1,4 @@
-package class_1;
+package class_1.Programs;
 
 public class First {
     public void greet(){

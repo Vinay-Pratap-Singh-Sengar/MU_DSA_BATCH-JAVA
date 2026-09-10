@@ -40,4 +40,4 @@ public class Operators {
 
 //wap to find out the last two digit from the number 2426;
 
-code-class-eight.vercel.app
+//code-class-eight.vercel.app

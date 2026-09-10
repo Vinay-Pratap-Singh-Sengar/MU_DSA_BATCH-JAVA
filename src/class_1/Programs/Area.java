@@ -1,4 +1,4 @@
-package class_1;
+package class_1.Programs;
 
 public class Area {
     public static void main(String[] args) {
