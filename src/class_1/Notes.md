@@ -1,3 +1,6 @@
+README.md
+
+
 ```
 ```
 
@@ -229,7 +232,7 @@ We cannot use keywords as variable names, class names, or method names.
 
 Some keywords used in our programs are:
 
-| KeywordMeaning |                                                         |
+| Keyword | Meaning |
 | -------------- | ------------------------------------------------------- |
 | `package`      | Defines the package                                     |
 | `import`       | Imports a class or package                              |
@@ -470,11 +473,11 @@ These are different tokens.
 
 Some important types of Java tokens are:
 
-1.  Keywords 
-2.  Identifiers 
-3.  Literals 
-4.  Operators 
-5.  Separators 
+1.  Keywords
+2.  Identifiers
+3.  Literals
+4.  Operators
+5.  Separators
 
 ---
 
@@ -644,8 +647,8 @@ double → int
 
 There are two common types of type casting:
 
--  Implicit Casting 
--  Explicit Casting 
+-  Implicit Casting
+-  Explicit Casting
 
 ---
 
@@ -856,7 +859,7 @@ Java can automatically convert the integer result into a `double`.
 
 # 10. Quick Summary
 
-| ConceptMeaningExample |                                     |                          |
+| Concept | Meaning | Example |
 | --------------------- | ----------------------------------- | ------------------------ |
 | Variable              | Named storage for a value           | `int age;`               |
 | Declaration           | Type + variable name                | `int age;`               |
@@ -969,11 +972,11 @@ int age = 20;
 
 Identify:
 
--  Keyword 
--  Identifier 
--  Operator 
--  Literal 
--  Separator 
+-  Keyword
+-  Identifier
+-  Operator
+-  Literal
+-  Separator
 
 ---
 
@@ -1108,13 +1111,13 @@ Larger Type → Smaller Type
 
 ### Important Rules
 
--  Use meaningful variable names. 
--  Do not use Java keywords as identifiers. 
--  Java is case-sensitive. 
--  Variable names cannot contain spaces. 
--  An identifier cannot start with a number. 
-- `javac` is used to compile a Java program. 
-- `java` is used to run a Java program. 
+-  Use meaningful variable names.
+-  Do not use Java keywords as identifiers.
+-  Java is case-sensitive.
+-  Variable names cannot contain spaces.
+-  An identifier cannot start with a number.
+- `javac` is used to compile a Java program.
+- `java` is used to run a Java program.
 
 ---
 
