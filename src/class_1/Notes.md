@@ -1,8 +1,7 @@
 README.md
 
 
-```
-```
+
 
 ````
 # Java Basics: Variables, Keywords, Identifiers, Tokens & Type Casting
@@ -44,8 +43,7 @@ public class Area {
 
 ### Output
 
-```
-```
+
 
 ```
 600
@@ -56,8 +54,7 @@ Area is = 600
 
 ### UserInput.java
 
-```
-```
+
 
 ```
 package class_1;
@@ -97,8 +94,7 @@ A **variable** is a named location in memory used to store a value.
 
 For example:
 
-```
-```
+
 
 ```
 int age = 20;
@@ -106,8 +102,7 @@ int age = 20;
 
 Here:
 
-```
-```
+
 
 ```
 int  → data type
@@ -121,8 +116,7 @@ age  → variable name
 
 Declaration means telling Java the **data type and name** of a variable.
 
-```
-```
+
 
 ```
 int length;
@@ -138,8 +132,7 @@ At this point, we have declared the variables.
 
 Initialization means giving a variable its **first value**.
 
-```
-```
+
 
 ```
 int c = 23;
@@ -147,8 +140,7 @@ int c = 23;
 
 We can also do it separately:
 
-```
-```
+
 
 ```
 int c;
@@ -161,8 +153,7 @@ c = 23;
 
 We can declare and initialize a variable in the same line:
 
-```
-```
+
 
 ```
 int length = 20;
@@ -176,8 +167,7 @@ int d = 4;
 
 Assignment means storing a value in a variable.
 
-```
-```
+
 
 ```
 int c;
@@ -189,8 +179,7 @@ Here, `23` is assigned to `c`.
 
 We can change the value later:
 
-```
-```
+
 
 ```
 int c = 23;
@@ -204,8 +193,7 @@ Now the value of `c` is `50`.
 
 ## Simple Example
 
-```
-```
+
 
 ```
 int age = 20;
@@ -215,8 +203,7 @@ System.out.println(age);
 
 ### Output
 
-```
-```
+
 
 ```
 20
@@ -245,8 +232,7 @@ Some keywords used in our programs are:
 
 ### Example
 
-```
-```
+
 
 ```
 public class Area {
@@ -254,8 +240,7 @@ public class Area {
 
 Here:
 
-```
-```
+
 
 ```
 public → keyword
@@ -267,8 +252,7 @@ Area   → identifier
 
 For example:
 
-```
-```
+
 
 ```
 System.out.println("Hello");
@@ -276,8 +260,7 @@ System.out.println("Hello");
 
 Here:
 
-```
-```
+
 
 ```
 System  → class
@@ -293,8 +276,7 @@ println → method
 
 Examples:
 
-```
-```
+
 
 ```
 Area
@@ -332,8 +314,7 @@ d
 
 ### 1. An identifier can start with a letter
 
-```
-```
+
 
 ```
 int age;
@@ -342,8 +323,7 @@ String name;
 
 ### 2. An identifier can contain numbers
 
-```
-```
+
 
 ```
 int student1;
@@ -354,8 +334,7 @@ But it cannot start with a number.
 
 ❌ Incorrect:
 
-```
-```
+
 
 ```
 int 1student;
@@ -365,8 +344,7 @@ int 1student;
 
 ### 3. `_` and `$` can be used
 
-```
-```
+
 
 ```
 int _value;
@@ -379,8 +357,7 @@ int $amount;
 
 ❌ Incorrect:
 
-```
-```
+
 
 ```
 int student name;
@@ -388,8 +365,7 @@ int student name;
 
 ✅ Correct:
 
-```
-```
+
 
 ```
 int studentName;
@@ -401,8 +377,7 @@ int studentName;
 
 ❌ Incorrect:
 
-```
-```
+
 
 ```
 int class = 10;
@@ -416,8 +391,7 @@ Because `class` is a Java keyword.
 
 These are different identifiers:
 
-```
-```
+
 
 ```
 age
@@ -427,8 +401,7 @@ AGE
 
 For example:
 
-```
-```
+
 
 ```
 int age = 20;
@@ -445,8 +418,7 @@ A **token** is a small individual unit of a Java program.
 
 For example:
 
-```
-```
+
 
 ```
 int age = 20;
@@ -454,8 +426,7 @@ int age = 20;
 
 This statement contains:
 
-```
-```
+
 
 ```
 int
@@ -485,8 +456,7 @@ Some important types of Java tokens are:
 
 Examples:
 
-```
-```
+
 
 ```
 public
@@ -503,8 +473,7 @@ new
 
 Examples:
 
-```
-```
+
 
 ```
 Area
@@ -523,8 +492,7 @@ Literals are fixed values written directly in the program.
 
 Examples:
 
-```
-```
+
 
 ```
 20
@@ -543,8 +511,7 @@ Operators are symbols used to perform operations.
 
 Examples:
 
-```
-```
+
 
 ```
 =
@@ -554,8 +521,7 @@ Examples:
 
 For example:
 
-```
-```
+
 
 ```
 int area = length * width;
@@ -563,8 +529,7 @@ int area = length * width;
 
 Here:
 
-```
-```
+
 
 ```
 =  → assignment operator
@@ -573,8 +538,7 @@ Here:
 
 The `+` operator can also be used for string concatenation:
 
-```
-```
+
 
 ```
 System.out.println("Area is = " + area);
@@ -588,8 +552,7 @@ Separators are symbols used to separate different parts of a Java program.
 
 Examples:
 
-```
-```
+
 
 ```
 ;
@@ -603,8 +566,7 @@ Examples:
 
 For example:
 
-```
-```
+
 
 ```
 System.out.println("Hello");
@@ -612,8 +574,7 @@ System.out.println("Hello");
 
 Here:
 
-```
-```
+
 
 ```
 ( ) → parentheses
@@ -629,8 +590,7 @@ Here:
 
 For example:
 
-```
-```
+
 
 ```
 int → double
@@ -638,8 +598,6 @@ int → double
 
 or:
 
-```
-```
 
 ```
 double → int
@@ -660,8 +618,7 @@ It usually happens when a smaller compatible data type is converted into a large
 
 Example:
 
-```
-```
+
 
 ```
 int a = 10;
@@ -673,8 +630,7 @@ System.out.println(d);
 
 ### Output
 
-```
-```
+
 
 ```
 10.0
@@ -682,8 +638,6 @@ System.out.println(d);
 
 Here:
 
-```
-```
 
 ```
 int → double
@@ -698,9 +652,6 @@ This is also called **widening conversion**.
 ## Another Example
 
 ```
-```
-
-```
 int marks = 90;
 
 double result = marks;
@@ -710,8 +661,7 @@ System.out.println(result);
 
 ### Output
 
-```
-```
+
 
 ```
 90.0
@@ -727,8 +677,7 @@ Explicit casting means manually converting one data type into another.
 
 Example:
 
-```
-```
+
 
 ```
 double d = 10.5;
@@ -740,8 +689,7 @@ System.out.println(a);
 
 ### Output
 
-```
-```
+
 
 ```
 10
@@ -751,8 +699,7 @@ The decimal part is removed.
 
 Here:
 
-```
-```
+
 
 ```
 (int) d
@@ -770,8 +717,7 @@ This is also called **narrowing conversion**.
 
 The basic syntax is:
 
-```
-```
+
 
 ```
 (targetType) value
@@ -779,8 +725,7 @@ The basic syntax is:
 
 Example:
 
-```
-```
+
 
 ```
 (int) 10.5
@@ -788,8 +733,7 @@ Example:
 
 Result:
 
-```
-```
+
 
 ```
 10
@@ -799,8 +743,7 @@ Result:
 
 ## Another Example
 
-```
-```
+
 
 ```
 double price = 99.99;
@@ -812,8 +755,7 @@ System.out.println(newPrice);
 
 ### Output
 
-```
-```
+
 
 ```
 99
@@ -825,8 +767,7 @@ System.out.println(newPrice);
 
 Suppose we have:
 
-```
-```
+
 
 ```
 int length = 20;
@@ -835,8 +776,7 @@ int width = 30;
 
 Then:
 
-```
-```
+
 
 ```
 int area = length * width;
@@ -846,8 +786,7 @@ Both `length` and `width` are integers, so the result is also an integer.
 
 We can also store the result in a `double`:
 
-```
-```
+
 
 ```
 double area = length * width;
@@ -884,8 +823,7 @@ Create a variable called `age` and store your age in it.
 
 Example:
 
-```
-```
+
 
 ```
 int age = 20;
@@ -899,8 +837,7 @@ Print the value of `age`.
 
 Create two integer variables:
 
-```
-```
+
 
 ```
 length = 10
@@ -911,8 +848,7 @@ Calculate and print the area.
 
 Expected output:
 
-```
-```
+
 
 ```
 Area = 50
@@ -924,8 +860,7 @@ Area = 50
 
 Create:
 
-```
-```
+
 
 ```
 int marks = 85;
@@ -935,8 +870,7 @@ Convert it into a `double` and print the result.
 
 Expected output:
 
-```
-```
+
 
 ```
 85.0
@@ -948,8 +882,7 @@ Expected output:
 
 What is wrong with this statement?
 
-```
-```
+
 
 ```
 int class = 10;
@@ -963,8 +896,7 @@ Think about the rules of identifiers.
 
 Find the different tokens in:
 
-```
-```
+
 
 ```
 int age = 20;
@@ -984,8 +916,7 @@ Identify:
 
 Predict the output:
 
-```
-```
+
 
 ```
 double value = 10.5;
@@ -1003,8 +934,7 @@ Create a program that takes `length` and `width` from the user and prints the ar
 
 Example:
 
-```
-```
+
 
 ```
 Enter the length:
@@ -1022,8 +952,7 @@ Area is = 600
 
 Create a program that takes two numbers from the user and prints:
 
-```
-```
+
 
 ```
 Sum
@@ -1033,8 +962,7 @@ Multiplication
 
 Example:
 
-```
-```
+
 
 ```
 Enter first number:
@@ -1054,8 +982,7 @@ Multiplication = 50
 
 ### Variables
 
-```
-```
+
 
 ```
 Declare → Initialize → Use
@@ -1063,8 +990,7 @@ Declare → Initialize → Use
 
 Example:
 
-```
-```
+
 
 ```
 int age;
@@ -1078,8 +1004,7 @@ System.out.println(age);
 
 ### Java Program
 
-```
-```
+
 
 ```
 Write → Compile → Run → Output
@@ -1089,8 +1014,7 @@ Write → Compile → Run → Output
 
 ### Type Casting
 
-```
-```
+
 
 ```
 Smaller Type → Larger Type
@@ -1098,8 +1022,7 @@ Smaller Type → Larger Type
     Automatic
 ```
 
-```
-```
+
 
 ```
 Larger Type → Smaller Type
@@ -1123,8 +1046,7 @@ Larger Type → Smaller Type
 
 ## ⭐ Key Concepts
 
-```
-```
+
 
 ```
 Variable
