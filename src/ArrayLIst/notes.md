@@ -194,7 +194,226 @@ list.get(2);   // 30
 
 ---
 
-# 8. Accessing Elements Using `get()`
+# 8. Size vs Capacity
+
+This is an important concept.
+
+## Size
+
+**Size = number of elements currently stored in the ArrayList.**
+
+Example:
+
+```java
+ArrayList<Integer> list = new ArrayList<>();
+
+list.add(10);
+list.add(20);
+list.add(30);
+
+System.out.println(list.size());
+```
+
+Output:
+
+```text
+3
+```
+
+The list contains:
+
+```text
+[10, 20, 30]
+```
+
+Therefore:
+
+```text
+Size = 3
+```
+
+We use:
+
+```java
+list.size()
+```
+
+to find the current number of elements.
+
+---
+
+## Capacity
+
+**Capacity = amount of internal storage currently available for storing elements.**
+
+Conceptually:
+
+```text
+ArrayList
+
+Capacity = 10
+
+┌────┬────┬────┬────┬────┬────┬────┬────┬────┬────┐
+│ 10 │ 20 │ 30 │    │    │    │    │    │    │    │
+└────┴────┴────┴────┴────┴────┴────┴────┴────┴────┴────┘
+   ↑     ↑     ↑
+ elements currently stored
+
+Size = 3
+Capacity = 10
+```
+
+So:
+
+```text
+Size      = 3
+Capacity  = 10
+```
+
+The important idea is:
+
+> **Size tells us how many elements are currently present, while capacity refers to the internal storage available before the ArrayList needs to grow.**
+
+---
+
+## Important: `size()` does NOT return capacity
+
+```java
+list.size();
+```
+
+returns the **number of elements**, not the capacity.
+
+Java's standard `ArrayList` API does not provide:
+
+```java
+list.capacity();   // ❌ No such method
+```
+
+So students should remember:
+
+```text
+size()     → Number of elements
+capacity   → Internal storage
+```
+
+---
+
+# 9. Initial Capacity
+
+We can specify an initial capacity when creating an ArrayList.
+
+```java
+ArrayList<Integer> list = new ArrayList<>(100);
+```
+
+Here:
+
+```text
+100 = Initial Capacity
+```
+
+It does **not** mean that the ArrayList contains 100 elements.
+
+Immediately after creation:
+
+```java
+System.out.println(list.size());
+```
+
+Output:
+
+```text
+0
+```
+
+So:
+
+```text
+Initial Capacity = 100
+Size = 0
+```
+
+### Important
+
+```java
+ArrayList<Integer> list = new ArrayList<>(100);
+```
+
+means:
+
+> Prepare internal storage with an initial capacity of 100.
+
+It does **not** mean:
+
+```text
+100 elements are already present
+```
+
+---
+
+# 10. What Happens When ArrayList Becomes Full?
+
+Conceptually, suppose the current capacity is 10:
+
+```text
+Capacity = 10
+Size = 10
+
+[10][20][30][40][50][60][70][80][90][100]
+```
+
+Now we add another element:
+
+```java
+list.add(110);
+```
+
+The current internal storage has no free space.
+
+ArrayList then:
+
+1. Creates a larger internal array.
+2. Copies/moves the existing elements.
+3. Adds the new element.
+4. Continues using the larger storage.
+
+Conceptually:
+
+```text
+Old Capacity
+10
+
+       ↓ Grow
+
+New Capacity
+Larger than 10
+```
+
+The **exact growth amount is implementation-dependent** and should not be assumed to be a fixed number.
+
+---
+
+# 11. Size vs Capacity — Quick Comparison
+
+| Size                                    | Capacity                              |
+| --------------------------------------- | ------------------------------------- |
+| Number of elements currently stored     | Internal storage available            |
+| Changes when elements are added/removed | Grows when more storage is required   |
+| Can be obtained using `size()`          | No public `capacity()` method         |
+| Represents actual elements              | Represents allocated internal storage |
+| Example: `3` elements                   | May have space for more elements      |
+
+### Remember
+
+```text
+Size      → How many elements are present
+Capacity  → How much internal storage is currently available
+```
+
+---
+
+# 12. Accessing Elements Using `get()`
 
 The `get()` method is used to access an element.
 
@@ -238,7 +457,7 @@ list.get(1)
 
 ---
 
-# 9. Updating Elements Using `set()`
+# 13. Updating Elements Using `set()`
 
 The `set()` method is used to replace an existing element.
 
@@ -278,7 +497,7 @@ System.out.println(list);
 
 ---
 
-# 10. Difference Between `add()` and `set()`
+# 14. Difference Between `add()` and `set()`
 
 This is an important concept.
 
@@ -323,7 +542,7 @@ add() → Insert
 
 ---
 
-# 11. Adding Element at a Specific Index
+# 15. Adding Element at a Specific Index
 
 We can insert an element at a particular index.
 
@@ -355,7 +574,7 @@ Output:
 
 ---
 
-# 12. Removing Elements
+# 16. Removing Elements
 
 We can remove elements using `remove()`.
 
@@ -389,7 +608,7 @@ The element at index `1` was removed.
 
 ---
 
-# 13. Important: `remove()` with Integer
+# 17. Important: `remove()` with Integer
 
 There is an important difference when working with `Integer`.
 
@@ -445,50 +664,7 @@ list.remove(Integer.valueOf(20));
 
 ---
 
-# 14. Finding Size Using `size()`
-
-The `size()` method returns the number of elements.
-
-```java
-ArrayList<Integer> list = new ArrayList<>();
-
-list.add(10);
-list.add(20);
-list.add(30);
-
-System.out.println(list.size());
-```
-
-Output:
-
-```text
-3
-```
-
-### Array vs ArrayList
-
-Array:
-
-```java
-arr.length
-```
-
-ArrayList:
-
-```java
-list.size()
-```
-
-Remember:
-
-```text
-Array      → length
-ArrayList  → size()
-```
-
----
-
-# 15. Checking Element Using `contains()`
+# 18. Checking Element Using `contains()`
 
 `contains()` checks whether an element exists in the ArrayList.
 
@@ -514,7 +690,7 @@ false
 
 ---
 
-# 16. Finding Index Using `indexOf()`
+# 19. Finding Index Using `indexOf()`
 
 `indexOf()` returns the first index of an element.
 
@@ -541,7 +717,7 @@ It returns the **first occurrence**.
 
 ---
 
-# 17. Finding Last Index Using `lastIndexOf()`
+# 20. Finding Last Index Using `lastIndexOf()`
 
 `lastIndexOf()` returns the last occurrence of an element.
 
@@ -566,7 +742,7 @@ Output:
 
 ---
 
-# 18. Checking Empty ArrayList
+# 21. Checking Empty ArrayList
 
 Use `isEmpty()`.
 
@@ -598,7 +774,7 @@ false
 
 ---
 
-# 19. Removing All Elements Using `clear()`
+# 22. Removing All Elements Using `clear()`
 
 The `clear()` method removes all elements.
 
@@ -627,7 +803,7 @@ Output:
 
 ---
 
-# 20. Traversing ArrayList
+# 23. Traversing ArrayList
 
 We can traverse an ArrayList using a normal `for` loop.
 
@@ -655,7 +831,7 @@ Output:
 
 ---
 
-# 21. Enhanced For Loop
+# 24. Enhanced For Loop
 
 We can also use an enhanced `for` loop.
 
@@ -699,7 +875,7 @@ It means:
 
 ---
 
-# 22. ArrayList of Strings
+# 25. ArrayList of Strings
 
 ArrayList can also store strings.
 
@@ -729,7 +905,7 @@ for(String name : names) {
 
 ---
 
-# 23. Taking User Input
+# 26. Taking User Input
 
 We can use `Scanner` to take input and store it in an ArrayList.
 
@@ -774,7 +950,7 @@ public class Main {
 
 ---
 
-# 24. Finding Sum of ArrayList
+# 27. Finding Sum of ArrayList
 
 ### Problem
 
@@ -805,7 +981,7 @@ System.out.println(sum);
 
 ---
 
-# 25. Find Maximum Element
+# 28. Find Maximum Element
 
 ### Problem
 
@@ -838,7 +1014,7 @@ System.out.println(max);
 
 ---
 
-# 26. Find Minimum Element
+# 29. Find Minimum Element
 
 ```java
 int min = list.get(0);
@@ -855,7 +1031,7 @@ System.out.println(min);
 
 ---
 
-# 27. Count Even Numbers
+# 30. Count Even Numbers
 
 ### Problem
 
@@ -888,7 +1064,7 @@ System.out.println(count);
 
 ---
 
-# 28. Count Odd Numbers
+# 31. Count Odd Numbers
 
 ```java
 int count = 0;
@@ -905,7 +1081,7 @@ System.out.println(count);
 
 ---
 
-# 29. Search an Element
+# 32. Search an Element
 
 ### Problem
 
@@ -956,7 +1132,7 @@ System.out.println(found);
 
 ---
 
-# 30. Count Frequency of an Element
+# 33. Count Frequency of an Element
 
 ### Problem
 
@@ -993,7 +1169,7 @@ System.out.println(count);
 
 ---
 
-# 31. Reverse an ArrayList
+# 34. Reverse an ArrayList
 
 We can manually traverse from the last index.
 
@@ -1018,7 +1194,7 @@ Output:
 
 ---
 
-# 32. Sorting an ArrayList
+# 35. Sorting an ArrayList
 
 Java provides the `Collections` class for common operations.
 
@@ -1057,7 +1233,7 @@ Output:
 
 ---
 
-# 33. Sort in Descending Order
+# 36. Sort in Descending Order
 
 ```java
 Collections.sort(list, Collections.reverseOrder());
@@ -1086,7 +1262,7 @@ Output:
 
 ---
 
-# 34. Reverse Using Collections
+# 37. Reverse Using Collections
 
 We can reverse the actual ArrayList using:
 
@@ -1117,7 +1293,7 @@ Output:
 
 ---
 
-# 35. Maximum and Minimum Using Collections
+# 38. Maximum and Minimum Using Collections
 
 We can use:
 
@@ -1138,7 +1314,7 @@ System.out.println("Minimum = " + min);
 
 ---
 
-# 36. Important ArrayList Methods
+# 39. Important ArrayList Methods
 
 | Method               | Description                    |
 | -------------------- | ------------------------------ |
@@ -1157,7 +1333,7 @@ System.out.println("Minimum = " + min);
 
 ---
 
-# 37. ArrayList + Collections Methods
+# 40. ArrayList + Collections Methods
 
 | Method                                               | Purpose         |
 | ---------------------------------------------------- | --------------- |
@@ -1169,7 +1345,7 @@ System.out.println("Minimum = " + min);
 
 ---
 
-# 38. Important Difference: Array vs ArrayList
+# 41. Array vs ArrayList
 
 ```text
 ARRAY
@@ -1197,7 +1373,7 @@ list.get(index)
 
 ---
 
-# 39. Practice Questions
+# 42. Practice Questions
 
 ## Basic
 
@@ -1353,40 +1529,109 @@ Output:
 
 ---
 
-# 40. Quick Revision
+# 43. Quick Revision
 
-Remember these important methods:
+## Creating ArrayList
 
 ```java
-list.add(10);              // Add
-list.add(1, 20);           // Insert
-list.get(0);               // Access
-list.set(0, 100);          // Update
-list.remove(0);            // Remove by index
-list.remove(Integer.valueOf(10)); // Remove by value
-
-list.size();               // Size
-list.contains(10);         // Search
-list.indexOf(10);          // First index
-list.lastIndexOf(10);      // Last index
-list.isEmpty();            // Check empty
-list.clear();              // Remove all
+ArrayList<Integer> list = new ArrayList<>();
 ```
 
-Collections:
+## Adding
+
+```java
+list.add(10);
+```
+
+## Accessing
+
+```java
+list.get(0);
+```
+
+## Updating
+
+```java
+list.set(0, 100);
+```
+
+## Removing by index
+
+```java
+list.remove(0);
+```
+
+## Removing by value
+
+```java
+list.remove(Integer.valueOf(10));
+```
+
+## Size
+
+```java
+list.size();
+```
+
+## Searching
+
+```java
+list.contains(10);
+```
+
+## First occurrence
+
+```java
+list.indexOf(10);
+```
+
+## Last occurrence
+
+```java
+list.lastIndexOf(10);
+```
+
+## Empty check
+
+```java
+list.isEmpty();
+```
+
+## Remove everything
+
+```java
+list.clear();
+```
+
+## Sorting
 
 ```java
 Collections.sort(list);
+```
+
+## Reverse
+
+```java
 Collections.reverse(list);
+```
+
+## Maximum
+
+```java
 Collections.max(list);
+```
+
+## Minimum
+
+```java
 Collections.min(list);
 ```
 
 ---
 
-# Key Points to Remember
+# 44. Key Points to Remember
 
-1. `ArrayList` is a **dynamic/resizable array**.
+1. `ArrayList` is a **dynamic/resizable collection**.
 2. It belongs to the `java.util` package.
 3. ArrayList stores **objects**, not primitive data types.
 4. Use wrapper classes such as `Integer` instead of `int`.
@@ -1395,7 +1640,12 @@ Collections.min(list);
 7. `set()` is used to update an element.
 8. `add()` is used to add or insert an element.
 9. `remove()` is used to delete an element.
-10. `size()` returns the number of elements.
-11. `contains()` checks whether an element exists.
-12. `Collections` provides useful operations such as sorting and reversing.
-13. ArrayList is commonly used when the number of elements is not fixed.
+10. `size()` returns the **current number of elements**.
+11. Capacity refers to the **internal storage available**.
+12. `size()` and capacity are **not the same thing**.
+13. `ArrayList` does not provide a public `capacity()` method.
+14. An initial capacity can be provided while creating an ArrayList.
+15. ArrayList automatically grows when more storage is required.
+16. `contains()` checks whether an element exists.
+17. `Collections` provides useful operations such as sorting and reversing.
+18. ArrayList is useful when the number of elements is not fixed.
